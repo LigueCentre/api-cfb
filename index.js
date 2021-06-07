@@ -7,6 +7,7 @@ const categories = require('./categories.json');
 const allteams = require('./allteams.json');
 
 app.use(express.json())
+app.use(cors());
 
 app.get('/club' , (req, res) => {
     res.status(200).send(`L'api fonctionne`)
