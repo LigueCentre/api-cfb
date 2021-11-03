@@ -38,16 +38,8 @@ app.get('/categories' , (req, res) => {
 })
 
 app.get('/allteams', (req, res) => {
-    const sql = " SELECT * FROM allteams DISNTINCT Category";
-    connection.query(sql, (err, results) => {
-        if (err) {
-            res.status(500).send({ errorMessage : err.message})
-        } else {
-            res.status(200).json(results)
-            res.header('Acces-Control-Allow-Origin', '*');
-            res.send(allteams)}
-    })
- 
+    res.header('Acces-Control-Allow-Origin', '*');
+    res.send(allteams)
 })
 
 app.listen(
