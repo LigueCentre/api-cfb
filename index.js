@@ -5,7 +5,7 @@ const importclubfiltered = require('./clubs.json');
 const cities = require('./cities.json');
 const categories = require('./categories.json');
 const allteams = require('./allteams.json');
-const cors = require('cors')
+const cors = require('cors');
 
 app.use(express.json())
 app.use(cors({
