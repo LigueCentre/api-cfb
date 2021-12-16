@@ -6,6 +6,7 @@ const cities = require('./cities.json');
 const categories = require('./categories.json');
 const allteams = require('./allteams.json');
 const cors = require('cors');
+const data = require('data.json')
 
 app.use(express.json())
 app.use(cors({
@@ -40,6 +41,11 @@ app.get('/categories' , (req, res) => {
 app.get('/allteams', (req, res) => {
     res.header('Acces-Control-Allow-Origin', '*');
     res.send(allteams)
+})
+
+app.get('/data', (req, res) => {
+    res.header('Acces-Control-Allow-Origin', '*');
+    res.send(data)
 })
 
 app.listen(
