@@ -6,7 +6,7 @@ const cities = require('./cities.json');
 const categories = require('./categories.json');
 const allteams = require('./allteams.json');
 const cors = require('cors');
-const data = require('data.json')
+const data = require('./data.json')
 
 app.use(express.json())
 app.use(cors({
